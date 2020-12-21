@@ -9,5 +9,10 @@ abstract: "Regularized arrangement of primitives on building façades to aligned
 featured: false
 publication: "*ISPRS Annals of Photogrammetry, Remote Sensing and Spatial Information Sciences*"
 doi: "10.5194/isprs-annals-V-2-2020-365-2020"
+
+ 
+url_pdf: https://arxiv.org/abs/2002.08549
+url_code: https://github.com/saedrna/Ranger
+
 ---
 
