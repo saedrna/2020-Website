@@ -10,8 +10,8 @@ featured: false
 publication: "*IEEE Geoscience and Remote Sensing Letters*"
 doi: "10.1109/LGRS.2019.2962696"
 
-url_project: '../projects/facade/'
-url_video: '../projects/facade/'
+url_project: '/projects/facade/'
+url_video: '/projects/facade/'
 
 ---
 

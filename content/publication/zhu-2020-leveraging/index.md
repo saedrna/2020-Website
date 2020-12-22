@@ -12,9 +12,9 @@ publication: "*ISPRS Journal of Photogrammetry and Remote Sensing*"
 doi: "10.1016/j.isprsjprs.2020.05.024"
 
 url_pdf: "https://arxiv.org/abs/2002.09085"
-url_project: "../projects/meshmatch"
-url_video: "../projects/meshmatch"
-url_dataset: "../projects/meshmatch"
+url_project: "/projects/meshmatch"
+url_video: "/projects/meshmatch"
+url_dataset: "/projects/meshmatch"
 url_code: "https://github.com/saedrna/RenderMatch"
 ---
 

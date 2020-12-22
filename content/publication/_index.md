@@ -14,4 +14,4 @@ header:
   image: ""
 ---
 
-&Dagger; for _(Mutual) Corresponding Author_
+&Dagger; for _Corresponding Author_

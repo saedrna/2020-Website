@@ -35,7 +35,7 @@ experience:
     location: Hong Kong
     date_start: '2015-09-23'
     date_end: '2019-07-31'
-  - title: Postdoctoral Fellowship
+  - title: Research Assistant
     company: The Hong Kong Polytechnic University
     company_url: 'http://www.lsgi.polyu.edu.hk/'
     location: Hong Kong

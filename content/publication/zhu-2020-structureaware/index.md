@@ -13,8 +13,8 @@ publication: ""
 
 url_pdf: https://arxiv.org/abs/2011.11210
 url_code: 'https://github.com/ChisonShang/MeshCompletion'
-url_dataset: '../projects/mesh/'
-url_project: '../projects/mesh/'
-url_video: '../projects/mesh/'
+url_dataset: '/projects/mesh/'
+url_project: '/projects/mesh/'
+url_video: '/projects/mesh/'
 ---
 
