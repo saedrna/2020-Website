@@ -26,7 +26,7 @@ item:
 - date_start: "2020-02-01"
   date_end: "2020-06-01"
   description: ""
-  organization: "[[Video]](https://v.douyu.com/show/2V0JMVJ9oBGMRY5k)[[Problem]](https://gitee.com/saedrna/Basis-of-Photogrammetry)"
-  title: "Basis of Photogrammetry" 
+  organization: "[[**_Course Video_**]](https://v.douyu.com/show/2V0JMVJ9oBGMRY5k)[-[**_Problem_**]](https://gitee.com/saedrna/Basis-of-Photogrammetry)"
+  title: "Fundementals of Photogrammetry" 
 
 ---
