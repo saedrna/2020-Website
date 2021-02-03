@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Real-time Rendering of Large-scale Point Cloud without Structured Searching Index by Random Filling</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <meta name="author" content="Han Hu (胡翰)">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description"
+    content="Real-time Rendering of Large-scale Point Cloud without Structured Searching Index by Random Filling" />
+  <meta name="keywords" content="vrlab, Han Hu, Aerial ground" />
+  <link rel="shortcut icon" href="img/icon.jpeg">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://www.vrlab.org.cn/~hanhu">Homepage</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#overview">Overview</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#abstract">Abstract</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#Point">Point Cloud</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#Video">Video</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#acknowledgements">Acknowledgements</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <!-- Overview -->
+      <div class="container" id="overview">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1>Real-time Rendering of Large-scale Point Cloud without Structured Searching Index by Random Filling</h1>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md">JIN YiGao</div>
+          <div class="col-md"><a href="https://www.vrlab.org.cn/~hanhu" target="_blank">HU Han</a></div>
+          <div class="col-md">DING Yulin</div>
+          <div class="col-md"><a href="https://www.vrlab.org.cn/~zhuq" target="_blank">ZHU Qing</a></div>
+        </div>
+        <div class="row">
+          <div class="col-md text-center">
+            <a href="https://gsee.swjtu.edu.cn/EN/Homepage.htm">Faculty of Geosciences and Environmental
+              Engineering, Southwest Jiaotong University, Chengdu, China</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abstract -->
+      <div class="container" id="abstract">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Abstract</h2>
+            <hr>
+          </div>
+          <div class="col-md-12">
+            <p style="text-align:justify; class=" text add-top-margin">
+              Point clouds, either from laser scanning or photogrammetric pipelines, have now become probably the most
+              popular data sources in the photogrammetry community.
+              Most current approaches for point clouds rendering require a prebuilt searching index for efficiency
+              considerations, such as octree or KD-tree.
+              Unfortunately, the tree structure is static and hard for dynamic updating.
+              This requirement makes directly editing of point clouds in a easy-to-use software solution hard: even
+              standard ``undo'' and ``redo'' operations are almost extreamly hard, if not impossible, to be implemented.
+              Aiming to solve the above issue, this paper proposes a strategy for large-scale point clouds rendering
+              without a tree structure.
+              The basic idea is very simple: we can reuse the information by reprojecting the render buffer from
+              previous frame and use random sampling to fill holes in current frame.
+              Based on reprojection and filling, the proposed method can do in-core rendering of large-scale point
+              clouds, suitable for the size of main memory in real time.
+              The method does not require to generate multi-resolution spatial structures in advance.
+              On this basis, a real-time rendering system supporting large-scale point clouds was developed, even for
+              notebook with medium- to low-end devices.
+              Experimental evaluations with various datasets collected from both aerial and terrestrial platforms, have
+              revealed that the system can undertake the task of efficient rendering of large-scale unstructured point
+              clouds, and its efficiency is one to two orders of magnitude faster than traditional structured rendering
+              methods.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texture Integration -->
+      <div class="container" id="Point">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Point Cloud</h2>
+            <hr>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="img/Montreal.png" class="img-fluid" alt="SWJTU">
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="img/Guadalajara.png" class="img-fluid" alt="SWJTU">
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="img/Strathalbyn.png" class="img-fluid" alt="SWJTU">
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="img/Warnimont.png" class="img-fluid" alt="SWJTU">
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="img/Bildstein.png" class="img-fluid" alt="SWJTU">
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="img/Feldkirch.png" class="img-fluid" alt="SWJTU">
+          </div>
+        </div>
+      </div>
+
+      <!-- Mesh Completion -->
+      <div class="container" id="Video">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Video</h2>
+            <hr>
+            <!-- <img src="img/xp.jpg" class="img-fluid" alt="Xipu">
+            <img src="img/sz.jpg" class="img-fluid" alt="Shenzhen">
+            <img src="img/dt.jpg" class="img-fluid" alt="Dortmund"> -->
+
+            <p>The video demonstrations are also available in <a href="#">Bilibili</a>.</p>
+            <!-- <div class="mx-auto col-md-12 embed-responsive embed-responsive-16by9">
+              <p><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/roUm-VeinFA"
+                  allowfullscreen></iframe></p>
+            </div> -->
+            <div class="mx-auto col-md-12 embed-responsive embed-responsive-16by9">
+              <p>
+                <iframe
+                  src="https://player.bilibili.com/player.html?aid=971431179&bvid=BV1Kp4y1s7ow&cid=291709833&page=1"
+                  allowfullscreen="allowfullscreen" width="100%" height="800" scrolling="no" frameborder="0"
+                  sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="acknowledgements">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Acknowledgements</h2>
+            <hr>
+          </div>
+          <div class="col-md-12">
+            <p style="text-align:justify;">
+              This work was supported in part by the National Key Research and Development Program of China (Project No.
+              2018YFC0825803) and by the National Natural Science Foundation of China (Project No. 41631174, 42071355,
+              41871291). In addition, the authors gratefully acknowledge the provision of the datasets by ISPRS and
+              EuroSDR, which were released in conjunction with the ISPRS Scientific Initiatives 2014 and 2015, led by
+              ISPRS ICWG I/Vb.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
