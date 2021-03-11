@@ -53,7 +53,7 @@ abstract: Photogrammetric mesh models obtained from aerial oblique images have b
   completion approach for road regions outperforms popular image completion methods,
   and an ablation study further confirms the effectiveness of the linear guidance.
   It should be noted that the proposed method can also handle tiled mesh models for
-  large-scale scenes. Code and datasets are available at the project website11https://vrlab.org.cn/hanhu/projects/mesh.
+  large-scale scenes. Code and datasets are available at the project website https://vrlab.org.cn/~hanhu/projects/mesh.
 publication: '*ISPRS Journal of Photogrammetry and Remote Sensing*'
 doi: 10.1016/j.isprsjprs.2021.02.010
 
