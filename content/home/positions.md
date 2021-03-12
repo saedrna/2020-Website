@@ -29,7 +29,7 @@ experience:
     date_start: '2019-08-01'
     date_end: ''
            
-  - title: Postdoctoral Fellowship
+  - title: Postdoctoral Fellow
     company: The Hong Kong Polytechnic University
     company_url: 'http://www.lsgi.polyu.edu.hk/'
     location: Hong Kong
