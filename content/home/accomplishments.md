@@ -34,6 +34,11 @@ item:
   organization_url: http://www.nosta.gov.cn/english/index.html
   title: "State Science and Technology Award of China, Second Class (Rank 3rd.)"
   url: ""
+- date_start: "2020-12-01"
+  description: ""
+  organization: Chongqing Science and Technology Office
+  organization_url: https://www.cqrb.cn/html/cqrb/2021-04/27/011/content_rb_282870.htm
+  title: Science and Technology Award of Chongqing, Second Class (Rank 3rd.) [[NEWS]](https://www.cqrb.cn/html/cqrb/2021-04/27/011/cqrb20210427011.pdf)
 - date_start: "2020-11-01"
   description: ""
   organization: China Railway Society
