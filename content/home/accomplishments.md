@@ -28,58 +28,71 @@ item:
   organization_url: 
   title: ASPRS Esri Award for Best Scientific Paper, First Place.
   description: "Wu, B.; Li, F.; **Hu, H.**; Zhao, Y.; Wang, Y.; Xiao, P.; Li, Y.; Liu, W. C.; Chen, L.; Ge, X.; others. Topographic and Geomorphological Mapping and Analysis of the Chang’E-4 Landing Site on the Far Side of the Moon. _Photogrammetric Engineering & Remote Sensing_ 2020, 86 (4), 247–258."
+
 - date_start: "2020-12-31"
   description: ""
   organization: NOSTA
   organization_url: http://www.nosta.gov.cn/english/index.html
   title: "State Science and Technology Award of China, Second Class (Rank 3rd.)"
   url: ""
+
 - date_start: "2020-12-01"
   description: ""
   organization: Chongqing Science and Technology Office
   organization_url: https://www.cqrb.cn/html/cqrb/2021-04/27/011/content_rb_282870.htm
   title: Science and Technology Award of Chongqing, Second Class (Rank 3rd.) [[NEWS]](https://www.cqrb.cn/html/cqrb/2021-04/27/011/cqrb20210427011.pdf)
+
 - date_start: "2020-11-01"
   description: ""
   organization: China Railway Society
   organization_url: http://www.crs.org.cn/
   title: National Railway Youth Science and Technology Award
+
 - date_start: "2019-01-01"
   organization: CAGIS
   organization_url: http://www.cagis.org.cn/
   title: Geographic Information Science Award of China, First Class (Rank 3rd.)
+
 - date_start: "2019-01-01"
   organization: MNR
   organization_url: http://gi.mnr.gov.cn/201911/t20191128_2484615.html
   title: National Land Resources Science and Technology Award of China, Second Class (Rank 2nd.)
+
 - date_start: "2019-01-01"
   organization: CSGPC
   organization_url: http://www.csgpc.org/list.php?fid=133
   title: Survey and Mapping Science and Technology Award of China, Second Class (Rank 3rd.)
+
 - date_start: "2018-01-01"
   organization: CAGIS
   organization_url: http://www.cagis.org.cn/
   title: Geographic Information Science Award of China, First Class (Rank 2rd.)
+
 - date_start: "2018-01-01"
   organization: GIS Forum
   organization_url: http://forum.gisera.com/
   title: The Emerging Star Award of GIS
+
 - date_start: "2016-01-01"
   organization: Geneva Inventions
   organization_url: https://inventions-geneva.ch/en/home/
   title: Geneva International Exhibition of Inventions, Gold Medal
+
 - date_start: "2016-01-01"
   organization: Geneva Inventions
   organization_url: https://inventions-geneva.ch/en/home/
   title: Geneva International Exhibition of Inventions, Special Merit Award
+
 - date_start: "2016-01-01"
   organization: ASPRS
   organization_url: https://www.asprs.org/wp-content/uploads/IGTF-2016-Awards-Program-Final.pdf
   title: Talbert Abrams Award, Second Honarable Mention
   description: "**Han Hu**, Qing Zhu, Zhiqiang Du, Yeting Zhang, and Yulin Ding. Reliable Spatial Relationship Constrained Feature Point Matching of Oblique Aerial Images, PE&RS 81 (1), 49-58."
+
 - date_start: "2016-01-01"
   organization: ASPRS
   organization_url: https://www.asprs.org/wp-content/uploads/2014/05/Awards.pdf
   title: John I. Davidson President Award, Third Place
   description: "Bo Wu, **Han Hu**, Qing Zhu, and Yeting Zhang for A Flexible Method for Zoom Lens Calibration and Modeling Using a Planar Checkerboard, PE&RS 79 (6), 555-571."
+  
 ---

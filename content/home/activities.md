@@ -29,17 +29,16 @@ item:
   organization: "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing"
   title: "Associate Editor" 
 
-- date_start: "2019-11-01"
-  date_end: "2023-11-01"
+- date_start: "2021-01-01"
+  date_end: ""
   description: ""
-  organization: "ISDE Chinese Committee on Virtual Geographical Environment"
-  title: "Committee Member"
+  organization: "Engineering of Surveying and Mapping [[Journal Web]](http://xsqk.hljit.edu.cn/Jweb_chgc/CN/column/column307.shtml)"
+  title: "Editorial Board Member"
 
 - date_start: "2019-01-01"
   date_end: ""
   description: ""
   organization: "Journal of Smart Cities"
   title: "Editorial Board Member"
-
-
+  
 ---

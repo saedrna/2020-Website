@@ -24,10 +24,10 @@ date_format: "2006"
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
 - date_start: "2021-01-01"
-  date_end: "2023-01-01"
+  date_end: "2026-01-01"
   description: ""
   organization: Southwest Jiaotong University
-  title: "Research fund for excellent overseas professionals, &yen;2,000,000, PI"
+  title: "Research fund for excellent overseas professionals, &yen;4,000,000, PI"
 
 - date_start: "2021-01-01"
   date_end: "2024-01-01"
@@ -35,10 +35,11 @@ item:
   organization: National Natural Science Foundation of China
   title: "Binary programming for structured reconstruction of buildings in complex urban environment, &yen;560,000, PI"
 
-- date_start: "2020-01-01"
+- date_start: "2021-01-01"
+  date_end: 
   description: ""
-  organization: Wuhan University
-  title: "DEM Reconstruction in Urban Environment, &yen;120,000, PI"
+  organization:  MNR
+  title: "Automatic DSM filtering, Land Satellite Remote Sensing Application Center, &yen;300,000, PI"
 
 - date_start: "2020-01-01"
   description: ""
@@ -56,12 +57,6 @@ item:
   description: ""
   organization: National Key Research and Development Program of China
   title: "Emergency surveying and mapping using Ka-InSAR, &yen;550,000, PI"
-
-- date_start: "2019-01-01"
-  date_end: "2021-01-01"
-  description: ""
-  organization: Southwest Jiaotong University
-  title: "Start-up research fund program, &yen;300,000, PI"
 
 - date_start: "2019-01-01"
   date_end: "2021-01-01"
