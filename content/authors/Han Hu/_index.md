@@ -18,7 +18,8 @@ bio: My research interests include .
 
 # Interests to show in About widget
 interests:
-- Urban Informatics and 3D Modeling
+- Photogrammetry
+- 3D GIS
 - Digital Elevation Models
 - Planetary Mapping
 

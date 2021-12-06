@@ -44,8 +44,8 @@ item:
 - date_start: "2020-03-01"
   date_end: 
   description: ""
-  organization: "Undergraduate Student: [[**_Course Video_**]](https://v.douyu.com/show/2V0JMVJ9oBGMRY5k)[-[**_Problem_**]](https://gitee.com/saedrna/Basis-of-Photogrammetry)"
-  title: "Fundamentals of Photogrammetry" 
+  organization: "Undergraduate Student: [[**_Course Video_**]](./project/photogrammetry)[-[**_Problem_**]](https://gitee.com/saedrna/Basis-of-Photogrammetry)"
+  title: "[Fundamentals of Photogrammetry](./project/photogrammetry)"
 
 - date_start: "2021-03-01"
   date_end: 
