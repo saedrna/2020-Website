@@ -86,3 +86,4 @@ url_video: "https://v.douyu.com/show/0zZVvPR3opmMO4E2"
 [计算机视觉的基本理论方法（2）](https://v.douyu.com/show/XqeO74eoGyyMxywG)
 
 - 答疑 [答疑课](https://v.douyu.com/show/4xq3WDKwmnrMLGNz)
+- 作业 [编程作业](https://gitee.com/saedrna/Basis-of-Photogrammetry)

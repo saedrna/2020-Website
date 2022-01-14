@@ -62,7 +62,7 @@ email: "han.hu@swjtu.edu.cn"
 highlight_name: true
 ---
 
-I am now a Professor in the Faculty of Geosciences and Environmental Engineering of the Southwest Jiaotong University in Chengdu, China. I was working as a Postdoctoral Fellow for the Hong Kong Polytechnic University during 2015 to 2019. Before that, I have recieved my Ph.D in Wuhan University in 2015 under the supervision of Prof. [Qing Zhu](https://vrlab.org.cn/~zhuq/) .
+I am now a Professor in the Faculty of Geosciences and Environmental Engineering of the Southwest Jiaotong University in Chengdu, China. I was working as a Postdoctoral Fellow for the Hong Kong Polytechnic University during 2015 to 2019. Before that, I have recieved my Ph.D in Wuhan University in 2015.
 
 I am now focusing on 3D reconstruction of our planet earth globally and regionally using datasets collected from the satellites, aircrafts, drones, vehicles, backpacks and hand-held devices.
 
