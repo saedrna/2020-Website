@@ -2,278 +2,600 @@
 <html>
 
 <head>
-  <title>Semi-Supervised Adversarial Recognition of Refined Window Structures for Inverse Procedural Facade Modeling
-  </title>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.slim.min.js"></script>
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdn.staticfile.org/popper.js/1.14.7/umd/popper.min.js"></script>
-  <meta name="author" content="Han Hu (胡翰)">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description"
-    content="Semi-Supervised Adversarial Recognition of Refined Window Structures for Inverse Procedural Facade Modeling" />
-  <meta name="keywords" content="vrlab, Han Hu, Oblique Photogrammetry" />
-  <link rel="shortcut icon" href="img/icon.jpeg">
+    <title>Semi-Supervised Adversarial Recognition of Refined Window Structures for Inverse Procedural Facade Modeling
+    </title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.14.7/umd/popper.min.js"></script>
+    <meta name="author" content="Han Hu (胡翰)">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description"
+          content="Semi-Supervised Adversarial Recognition of Refined Window Structures for Inverse Procedural Facade Modeling"/>
+    <meta name="keywords" content="vrlab, Han Hu, Oblique Photogrammetry"/>
+    <link rel="shortcut icon" href="img/icon.jpeg">
 </head>
 
+<style>
+    .model-style {
+        color: darkblue;
+        z-index: 999;
+        height: 20px;
+        width: 50%;
+        float: left;
+        text-align: center;
+        line-height: 20px;
+    }
+</style>
 <body>
-  <div class="container">
+<div class="container">
     <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="https://www.vrlab.org.cn/~hanhu">Homepage</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#overview">Overview</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#abstract">Abstract</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#pipeline">Pipeline</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#results">Results</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#acknowledgements">Acknowledgements</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#links">Links</a>
-          </li>
-        </ul>
-      </div>
+        <a class="navbar-brand" href="https://www.vrlab.org.cn/~hanhu">Homepage</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#overview">Overview</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#abstract">Abstract</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#pipeline">Pipeline</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#results">Results</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#acknowledgements">Acknowledgements</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#links">Links</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <div class="jumbotron jumbotron-fluid">
-      <!-- Overview -->
-      <div class="container" id="overview">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h1>Semi-Supervised Adversarial Recognition of Refined Window
-              Structures for Inverse Procedural Facade Modeling</h1>
-          </div>
+        <!-- Overview -->
+        <!--id!-->
+        <div class="container" id="overview">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Semi-Supervised Adversarial Recognition of Refined Window
+                        Structures for Inverse Procedural Facade Modeling</h1>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md"><a href="https://www.vrlab.org.cn/~hanhu" target="_blank">Han Hu<sup>a</sup></a>
+                </div>
+                <div class="col-md">Xinrong Liang<sup>a</sup></div>
+                <div class="col-md">Yulin Ding<sup>a,</sup>*</sup></div>
+                <div class="col-md">Xuekun Yuan<sup>a</sup></div>
+                <div class="col-md">Qisen Shang<sup>a</sup></div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md">Bo Xu<sup>a</sup></div>
+                <div class="col-md">Xuming Ge<sup>a</sup></div>
+                <div class="col-md">Min Chen<sup>a</sup></div>
+                <div class="col-md">Ruofei Zhong<sup>b</sup></div>
+                <div class="col-md">Qing Zhu<sup>a</sup></div>
+            </div>
+            <div class="row">
+                <div class="col-md text-center">
+                    <a href="https://gsee.swjtu.edu.cn/EN/Homepage.html"><sup>a</sup>Faculty of Geosciences and
+                        Environmental
+                        Engineering, Southwest Jiaotong University, Chengdu, China</a>
+                </div>
+                <div class="col-md text-center">
+                    <p><sup>b</sup>Beijing Advanced Innovation Center for Imaging Technology, Capital Normal University,
+                        Beijing, China</p>
+                </div>
+            </div>
         </div>
-        <div class="row text-center">
-          <div class="col-md"><a href="https://www.vrlab.org.cn/~hanhu" target="_blank">Han Hu<sup>a</a></div>
-          <div class="col-md">Xinrong Liang<sup>a</sup></div>
-          <div class="col-md">Yulin Ding<sup>a,</sup>*</sup></div>
-          <div class="col-md">Qisen Shang<sup>a</sup></div>
-          <div class="col-md">Bo Xu<sup>a</sup></div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md">Xuming Ge<sup>a</sup></div>
-          <div class="col-md">Min Chen<sup>a</sup></div>
-          <div class="col-md">Ruofei Zhong<sup>b</sup></div>
-          <div class="col-md">Qing Zhu<sup>a</sup></div>
-        </div>
-        <div class="row">
-          <div class="col-md text-center">
-            <a href="https://gsee.swjtu.edu.cn/EN/Homepage.htm"><sup>a</sup>Faculty of Geosciences and Environmental
-              Engineering, Southwest Jiaotong University, Chengdu, China</a>
-          </div>
-          <div class="col-md text-center">
-            <p><sup>b</sup>Beijing Advanced Innovation Center for Imaging Technology, Capital Normal University,
-              Beijing, China</p>
-          </div>
-        </div>
-      </div>
 
-      <!-- Abstract -->
-      <div class="container" id="abstract">
-        <div class="row">
-          <div class="col-md-12">
-            <h2>Abstract</h2>
-            <hr>
-          </div>
-          <div class="col-md-12">
-            <p class="text add-top-margin">
-              Deep learning methods are notoriously data hungry, which requires a large amount of labeled samples.
-              Unfortunately, the large amount of interactive sample labeling efffforts has greatly hindered the
-              application of deep learning methods, especially for 3D modeling tasks, which requires heterogeneous
-              samples.
-              To alleviate the work of data annotation for learned 3D modeling of facade, this paper proposed a
-              semi-supervised adversarial recognition methods for the inverse procedural modeling.
-              Beginning with textured LOD-2 (level of details) models, we use the classical consti tutional neural
-              networks to recognize the types and estimate the parameters of windows, from the image patches.
-              The window types and parameters are assembled into a procedural grammar. A simple procedural engine is
-              built inside an existing 3D modeling software, which produces fifine-grained window geometries.
-              In order to obtain a useful model from few labeled samples, we leverage the generate adversarial network
-              to train the feature extractor semi-supervisedly.
-              The adversarial training strategy can also exploit the large amount of unlabeled data to make the training
-              phase more stable.
-              Experiments using publicly available facade image dataset reveals that the proposed training strategy can
-              obtain about 10% improvement in classifification accuracy and 50% improvement in parameter estimation
-              under the same network structure.
-              In addition, performance gains are more pronounced when testing against unseen data featuring difffferent
-              facade styles.
-            </p>
-            <hr>
-          </div>
+        <!-- Abstract -->
+        <div class="container" id="abstract">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Abstract</h2>
+                    <hr>
+                </div>
+                <div class="col-md-12">
+                    <p class="text add-top-margin">
+                        Deep learning methods are notoriously data hungry, which requires a large amount of labeled
+                        samples.
+                        Unfortunately, the large amount of interactive sample labeling efffforts has greatly hindered
+                        the
+                        application of deep learning methods, especially for 3D modeling tasks, which requires
+                        heterogeneous
+                        samples.
+                        To alleviate the work of data annotation for learned 3D modeling of facade, this paper proposed
+                        a
+                        semi-supervised adversarial recognition methods for the inverse procedural modeling.
+                        Beginning with textured LOD-2 (level of details) models, we use the classical consti tutional
+                        neural
+                        networks to recognize the types and estimate the parameters of windows, from the image patches.
+                        The window types and parameters are assembled into a procedural grammar. A simple procedural
+                        engine is
+                        built inside an existing 3D modeling software, which produces fifine-grained window geometries.
+                        In order to obtain a useful model from few labeled samples, we leverage the generate adversarial
+                        network
+                        to train the feature extractor semi-supervisedly.
+                        The adversarial training strategy can also exploit the large amount of unlabeled data to make
+                        the training
+                        phase more stable.
+                        Experiments using publicly available facade image dataset reveals that the proposed training
+                        strategy can
+                        obtain about 10% improvement in classifification accuracy and 50% improvement in parameter
+                        estimation
+                        under the same network structure.
+                        In addition, performance gains are more pronounced when testing against unseen data featuring
+                        difffferent
+                        facade styles.
+                    </p>
+                    <hr>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Texture Integration -->
-      <div class="container" id="pipeline">
-        <div class="row">
-          <div class="col-md-12">
-            <h2>Pipeline</h2>
-            <hr>
-          </div>
-          <div class="col-md-12 add-top-margin">
-            <img src="img/pipeline.jpg" class="img-fluid" alt="pipeline">
-            <hr>
-          </div>
+        <!-- Texture Integration -->
+        <div class="container" id="pipeline">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Pipeline</h2>
+                    <hr>
+                </div>
+                <div class="col-md-12 add-top-margin">
+                    <img src="img/pipeline.jpg" class="img-fluid" alt="pipeline">
+                    <hr>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Mesh Completion -->
-      <div class="container" id="results">
-        <div class="row">
-          <div class="col-md-12">
-            <h2>Results</h2>
-            <hr>
-            <h5>Reconstruction of Single Buildings</h5>
+        <!-- Mesh Completion -->
+        <div class="container" id="results">
             <div class="row">
-              <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9"> 
-                <iframe 
-                title="NewLondonHouse" frameborder="0" allowfullscreen mozallowfullscreen="true" 
-                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking 
-                execution-while-out-of-viewport execution-while-not-rendered web-share 
-                src="https://sketchfab.com/models/49384b383aa4452b8f6395d96128ae3f/embed"> </iframe> </div>
-              <hr>
-              <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9"> <iframe title="Addle Hill" frameborder="0" allowfullscreen mozallowfullscreen="true" 
-                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" 
-                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered 
-                web-share src="https://sketchfab.com/models/c83840e812e3424eb3113ca3438febab/embed"> </iframe> </div>
-              <hr>
+                <div class="col-md-12">
+                    <h2>Results</h2>
+                    <hr>
+                    <h5>Reconstruction of Single Buildings</h5>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="NewLondonHouse_noavg" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/16c9b1df8a1a4d369ebbc9e4682e39ce/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <h6 class="col-md text-center">without group processing</h6>
+                            </div>
+                        </div>
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="NewLondonHouse" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/49384b383aa4452b8f6395d96128ae3f/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <div class="col-md text-center">with group processing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="Addle Hill_noavg" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/e8610c88bc934ac3b5d9463a102fb585/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <h6 class="col-md text-center">without group processing</h6>
+                            </div>
+                        </div>
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="Addle Hill" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/c83840e812e3424eb3113ca3438febab/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <div class="col-md text-center">with group processing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="State Capitol Annex_noavg" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/fc149e5c56b249b6bdbfd84719cfd515/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <h6 class="col-md text-center">without group processing</h6>
+                            </div>
+                        </div>
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="State Capitol Annex" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/456a19fdba9a44e6bb9c08767d8057d9/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <div class="col-md text-center">with group processing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="Bank_noavg" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/ab89957739084b238fce57ea28cfbedd/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <h6 class="col-md text-center">without group processing</h6>
+                            </div>
+                        </div>
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="Bank" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/a9cad813443746c1830efb58e1c5c9a7/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <div class="col-md text-center">with group processing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="Bracken House_noavg" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/62382e61d3fa44748eb44d0c4b61acae/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <h6 class="col-md text-center">without group processing</h6>
+                            </div>
+                        </div>
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="Bracken House" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/5ae63d0a1d0a4d8d92f3b2a65a67acea/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <div class="col-md text-center">with group processing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="BT centre_noavg" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/b1829dbc94074b2599b971d56eecca9d/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <h6 class="col-md text-center">without group processing</h6>
+                            </div>
+                        </div>
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="BT centre" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/6bf95e58c4e0411d92209c9cf52ec15f/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <div class="col-md text-center">with group processing</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 模型视频，建模过程 -->
+                    <hr>
+                    <h5>Reconstruction of Blocks</h5>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="London_noavg" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/3d-models/london-noavg-5f9808f1216248b4ab54ed0acb31e969/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <h6 class="col-md text-center">without group processing</h6>
+                            </div>
+                        </div>
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="London" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/273cf1c6ccaf4e1499a600b2a6367c6f/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <div class="col-md text-center">with group processing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="Rome_noavg" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/3d-models/rome-noavg-7ae0e081eda84bb18e116c60fc378282/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <h6 class="col-md text-center">without group processing</h6>
+                            </div>
+                        </div>
+                        <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9">
+                            <div class="row">
+                                <iframe title="Rome" frameborder="0" allowfullscreen
+                                        mozallowfullscreen="true"
+                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                        web-share
+                                        src="https://sketchfab.com/models/bf20f9a16c7d4cb18415b2e59126bad5/embed">
+                                </iframe>
+                                <br/>
+                            </div>
+                            <div class="row">
+                                <div class="col-md text-center">with group processing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Rendering Results</h5>
+                    <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
+                        <p>
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_kYyBk1bN54"
+                                    allowfullscreen></iframe>
+                        </p>
+                    </div>
+                    <hr>
+                    <h5>Modeling Processes</h5>
+                    <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
+                        <p>
+                            <iframe class="embed-responsive-item" src=" https://www.youtube.com/embed/OI9Qh6w46yo"
+                                    allowfullscreen></iframe>
+                        </p>
+                    </div>
+                    <hr>
+                    <h5>Batch Editing</h5>
+                    <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
+                        <p>
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rzXvs6C9llY"
+                                    allowfullscreen></iframe>
+                        </p>
+                    </div>
+                    <hr>
+                    <p>The video demonstrations are also available in <a
+                            href="https://space.bilibili.com/31767485/video">Bilibili</a>.</p>
+                    <hr>
+                    <h5>LOD Creation</h5>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/rnqKOwMtfKA"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </p>
+                        </div>
+                        <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/bABGua0Kljw"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/VO3-LpcZTv4"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </p>
+                        </div>
+                        <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/2slhIdaLFoM"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ni55NfVmSYY"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </p>
+                        </div>
+                        <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/sw5Oncri518"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </p>
+                            <hr>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>The video demonstrations are also available in <a
+                            href="https://www.bilibili.com/medialist/play/92471?from=space&business=space_series&business_id=2340406&desc=1">Bilibili</a>.
+                    </p>
+                    <hr>
+                    <h5>Window Generation</h5>
+                    <hr>
+                    <div class="row">
+                        <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/XBmNLYmBTA0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="container" id="acknowledgements">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Acknowledgements</h2>
+                            <hr>
+                        </div>
+                        <div class="col-md-12">
+                            <p class="text add-top-margin">
+                                This work was supported in part by the National Natural Science Foundation of
+                                China(Project No.
+                                42071355, 41871291 and 41971411),
+                                in part by the National Key Research and Development Program of China (Project No.
+                                2018YFC0825803),
+                                and in part by the Sichuan Science and Technology Program (Project No. 2020JDTD0003)
+                            </p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <!-- Links -->
+                <div class="container" id="links">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Links</h2>
+                            <hr>
+                        </div>
+                        <a href="#" class="col-md-2 my-auto img-fluid text-center">
+                            <i class="fa fa-github fa-5x" aria-hidden="true"></i>
+                            <div>(Code: To be released)</div>
+                        </a>
+                        <a href="#" class="col-md-2 my-auto img-fluid text-center">
+                            <i class="fa fa-database fa-5x" aria-hidden="true"></i>
+                            <div>(Datasets: To be released)</div>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="container" id="copyright">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Copyright</h2>
+                            <hr>
+                        </div>
+                        <div class="col-md-12">
+                            <p class="text add-top-margin">
+                                The code is released based on <a href="https://opensource.org/licenses/MIT"
+                                                                 target="_blank">MIT
+                                License</a> and the data is released on <a
+                                    href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+                                    target="_blank">CC BY-NC-ND 4.0</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-              <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9"> 
-                <iframe 
-                title="State Capitol Annex" frameborder="0" allowfullscreen mozallowfullscreen="true" 
-                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking 
-                execution-while-out-of-viewport execution-while-not-rendered web-share 
-                src="https://sketchfab.com/models/456a19fdba9a44e6bb9c08767d8057d9/embed"> </iframe> </div>
-              <hr>
-              <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9"> <iframe title="Bank" frameborder="0" allowfullscreen mozallowfullscreen="true" 
-                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" 
-                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered 
-                web-share src="https://sketchfab.com/models/a9cad813443746c1830efb58e1c5c9a7/embed"> </iframe> </div>
-              <hr>
-            </div>
-            <div class="row">
-              <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9"> 
-                <iframe 
-                title="Bracken House" frameborder="0" allowfullscreen mozallowfullscreen="true" 
-                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking 
-                execution-while-out-of-viewport execution-while-not-rendered web-share 
-                src="https://sketchfab.com/models/5ae63d0a1d0a4d8d92f3b2a65a67acea/embed"> </iframe> </div>
-              <hr>
-              <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9"> <iframe title="BT centre" frameborder="0" allowfullscreen mozallowfullscreen="true" 
-                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" 
-                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered 
-                web-share src="https://sketchfab.com/models/6bf95e58c4e0411d92209c9cf52ec15f/embed"> </iframe> </div>
-              <hr>
-            </div>
-            <!-- 模型视频，建模过程 -->
-            <hr>
-            <h5>Reconstruction of Blocks</h5>
-            <div class="row">
-              <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9"> 
-                <iframe 
-                title="Borough High Street,London" frameborder="0" allowfullscreen mozallowfullscreen="true" 
-                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking 
-                execution-while-out-of-viewport execution-while-not-rendered web-share 
-                src="https://sketchfab.com/models/273cf1c6ccaf4e1499a600b2a6367c6f/embed"> </iframe> </div>
-              <hr>
-              <div class="mx-auto col-md-6 embed-responsive embed-responsive-16by9"> <iframe title="Rome" frameborder="0" allowfullscreen mozallowfullscreen="true" 
-                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" 
-                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered 
-                web-share src="https://sketchfab.com/models/bf20f9a16c7d4cb18415b2e59126bad5/embed"> </iframe> </div>
-              <hr>
-            </div>
-            <hr>
-            <h5>Rendering Results</h5>
-            <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
-              <p><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_kYyBk1bN54"
-                  allowfullscreen></iframe></p>
-            </div>
-            <hr>
-            <h5>Modeling Processes</h5>
-            <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
-              <p><iframe class="embed-responsive-item" src=" https://www.youtube.com/embed/OI9Qh6w46yo"
-                  allowfullscreen></iframe></p>
-            </div>
-            <hr>
-            <h5>Batch Editing</h5>
-            <div class="mx-auto col-md-6 add-top-margin embed-responsive embed-responsive-16by9">
-              <p><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rzXvs6C9llY"
-                  allowfullscreen></iframe></p>
-            </div>
-            <hr>
-            <p>The video demonstrations are also available in <a
-                href="https://space.bilibili.com/31767485/video">Bilibili</a>.</p>
-            <hr>
-          </div>
-          <div class="container" id="acknowledgements">
-            <div class="row">
-              <div class="col-md-12">
-                <h2>Acknowledgements</h2>
-                <hr>
-              </div>
-              <div class="col-md-12">
-                <p class="text add-top-margin">
-                  This work was supported in part by the National Natural Science Foundation of China(Project No.
-                  42071355, 41871291 and 41971411),
-                  in part by the National Key Research and Development Program of China (Project No. 2018YFC0825803),
-                  and in part by the Sichuan Science and Technology Program (Project No. 2020JDTD0003)
-                </p>
-                <hr>
-              </div>
-            </div>
-          </div>
-          <!-- Links -->
-          <div class="container" id="links">
-            <div class="row">
-              <div class="col-md-12">
-                <h2>Links</h2>
-                <hr>
-              </div>
-              <a href="#" class="col-md-2 my-auto img-fluid text-center">
-                <i class="fa fa-github fa-5x" aria-hidden="true"></i>
-                <div>(Code: To be released)</div>
-              </a>
-              <a href="#" class="col-md-2 my-auto img-fluid text-center">
-                <i class="fa fa-database fa-5x" aria-hidden="true"></i>
-                <div>(Datasets: To be released)</div>
-              </a>
-            </div>
-            <hr>
-          </div>
-          <div class="container" id="copyright">
-            <div class="row">
-              <div class="col-md-12">
-                <h2>Copyright</h2>
-                <hr>
-              </div>
-              <div class="col-md-12">
-                <p class="text add-top-margin">
-                  The code is released based on <a href="https://opensource.org/licenses/MIT" target="_blank">MIT
-                    License</a> and the data is released on <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
-                    target="_blank">CC BY-NC-ND 4.0</a>.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 </body>
 </html>
