@@ -8,3 +8,4 @@ public/
 assets/jsconfig.json
 
 .history
+.hugo_build.lock

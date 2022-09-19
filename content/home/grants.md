@@ -23,6 +23,12 @@ date_format: "2006"
 #   Leave other parameters empty if not required.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
+- date_start: "2023-01-01"
+  date_end: "2027-12-31"
+  description: ""
+  organization: National Natural Science Foundation of China
+  title: "Intelligent updating of precision 3D city model with multi-source data fusion, &yen;2,740,000, Co-PI"
+
 - date_start: "2021-12-01"
   date_end: "2024-12-01"
   description: ""
