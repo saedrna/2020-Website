@@ -7,7 +7,7 @@ subtitle: ''
 summary: ''
 authors:
 - Li Chen
-- Yulin Ding$Dagger;
+- Yulin Ding&Dagger;
 - Saeid Pirasteh
 - __Han Hu__
 - Qing Zhu
