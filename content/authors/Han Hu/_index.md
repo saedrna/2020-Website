@@ -66,4 +66,4 @@ I am now a Professor in the Faculty of Geosciences and Environmental Engineering
 
 I am now focusing on 3D reconstruction of our planet earth globally and regionally using datasets collected from the satellites, aircrafts, drones, vehicles, backpacks and hand-held devices.
 
-Please find my CV {{< staticref "media/CV-Han Hu.pdf" "newtab" >}}here{{< /staticref >}}.
+Please find my CV {{< staticref "media/CV-Han Hu.pdf" "newtab" >}}here{{< /staticref >}} {{< staticref "media/CV-Han Hu CN.pdf" "newtab" >}}(in Chinese){{< /staticref >}}.
