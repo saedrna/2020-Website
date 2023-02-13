@@ -8,7 +8,7 @@ summary: ''
 authors:
 - Bo Xu
 - __Han Hu__
-- Qing Zhu&Dagger
+- Qing Zhu&ast
 - Xuming Ge
 - Yigao Jin
 - Haojia Yu

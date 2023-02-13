@@ -7,7 +7,7 @@ summary: ''
 authors:
 - Shengfu Li
 - Cheng Liao
-- Yulin Ding&Dagger
+- Yulin Ding&ast
 - __Han Hu__
 - Yang Jia
 - Min Chen

@@ -8,7 +8,7 @@ summary: ''
 authors:
 - __Han Hu__
 - Xinrong Liang
-- Yulin Ding&Dagger;
+- Yulin Ding&ast;
 - Xuekun Yuan
 - Qisen Shang
 - Bo Xu

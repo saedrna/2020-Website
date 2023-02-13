@@ -8,7 +8,7 @@ summary: ''
 authors:
 - Haowei Zeng
 - Qing Zhu
-- Yulin Ding&Dagger;
+- Yulin Ding&ast;
 - __Han Hu__
 - Li Chen
 - Xiao Xie

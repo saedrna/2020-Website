@@ -4,7 +4,7 @@
 title: Joint Learning of Contour and Structure for Boundary-Preserved Building Extraction
 subtitle: ''
 summary: ''
-authors: ["Cheng Liao", "__Han Hu__&Dagger", "Haifeng Li", "Xuming Ge", "Min Chen", "Chuangnong Li", "Qing Zhu"]
+authors: ["Cheng Liao", "__Han Hu__&ast", "Haifeng Li", "Xuming Ge", "Min Chen", "Chuangnong Li", "Qing Zhu"]
 tags: []
 categories: []
 date: '2021-03-10'

@@ -4,7 +4,7 @@
 title: Structure-Aware Completion of Photogrammetric Meshes in Urban Road Environment
 subtitle: ''
 summary: ''
-authors: ["Qing Zhu", "Qishen Shang", "__Han Hu__&Dagger;", "Haojia Yu", "Ruofei Zhong"]
+authors: ["Qing Zhu", "Qishen Shang", "__Han Hu__&ast;", "Haojia Yu", "Ruofei Zhong"]
 
 tags:
 - '"3D modeling"'

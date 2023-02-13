@@ -2,7 +2,7 @@
 title: "Leveraging Photogrammetric Mesh Models for Aerial-Ground Feature Point Matching toward Integrated 3D Reconstruction"
 date: 2020-01-01
 publishDate: 2020-12-21T07:44:54.146463Z
-authors: ["Qing Zhu", "Zhendong Wang", "__Han Hu__&Dagger;", "Linfu Xie", "Xuming Ge", "Yeting Zhang"]
+authors: ["Qing Zhu", "Zhendong Wang", "__Han Hu__&ast;", "Linfu Xie", "Xuming Ge", "Yeting Zhang"]
 
 
 publication_types: ["2"]

@@ -7,7 +7,7 @@ summary: ''
 authors:
 - __Han Hu__
 - Bo Feng
-- Bo Xu&Dagger;
+- Bo Xu&ast;
 - Qing Zhu
 - Xuming Ge
 - Min Chen

@@ -14,4 +14,4 @@ header:
   image: ""
 ---
 
-&Dagger; for _Corresponding Author_
+&ast; for _Corresponding Author_
