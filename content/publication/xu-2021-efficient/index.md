@@ -65,6 +65,6 @@ publication: '*ISPRS Journal of Photogrammetry and Remote Sensing*'
 
 doi: 10.1016/j.isprsjprs.2021.03.006
 
-url_project: https://vrlab.org.cn/~boxu/projects/lod2/
+url_project: https://vrlab.org.cn/~boxu/~hanhu/projects/lod2/
 
 ---

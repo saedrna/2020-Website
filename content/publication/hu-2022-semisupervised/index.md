@@ -69,8 +69,8 @@ doi: 10.1016/j.isprsjprs.2022.08.014
 
 url_pdf: https://arxiv.org/abs/2201.08977
 url_code: 'https://github.com/yuanxk-619/windowopens'
-url_dataset: '/projects/windows/'
-url_project: '/projects/windows/'
-url_video: '/projects/windows/'
+url_dataset: '/~hanhu/projects/windows/'
+url_project: '/~hanhu/projects/windows/'
+url_video: '/~hanhu/projects/windows/'
 
 ---
