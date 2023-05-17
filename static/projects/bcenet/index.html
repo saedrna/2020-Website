@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Structure-Aware Completion of Photogrammetric Meshes in Urban Road Environment</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <meta name="author" content="Han Hu (胡翰)">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Structure-Aware Completion of Photogrammetric Meshes in Urban Road Environment" />
+  <meta name="keywords" content="vrlab, Han Hu, Aerial ground" />
+  <link rel="shortcut icon" href="img/icon.jpeg">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://www.vrlab.org.cn/~hanhu">Homepage</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#overview">Overview</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#abstract">Abstract</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#extraction">Results</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#datasets">Datasets</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#acknowledgements">Acknowledgements</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#links">Links</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <!-- Overview -->
+      <div class="container" id="overview">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1>BCE-Net: Reliable Building Footprints Change Extraction based on Historical Map and Up-to-Date Images
+              using Contrastive Learning</h1>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md">LIAO Cheng<sup>a</sup></div>
+          <div class="col-md"><a href="https://www.vrlab.org.cn/~hanhu" target="_blank">HU Han<sup>a,</sup>*</a></div>
+          <div class="col-md">YUAN Xuekun<sup>a</sup></div>
+          <div class="col-md">LI Haifeng<sup>b</sup></div>
+          <div class="col-md">LIU Chao<sup>c</sup></div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md">LIU Chunyang<sup>c</sup></div>
+          <div class="col-md">FU Gui<sup>d</sup></div>
+          <div class="col-md">DING Yulin<sup>a</sup></div>
+          <div class="col-md"><a href="https://www.vrlab.org.cn/~zhuq" target="_blank">ZHU Qing<sup>a</sup></a></div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md"><sup>a</sup>Southwest Jiaotong University, Chengdu</div>
+          <div class="col-md"><sup>b</sup>Central South University, Changsha</div>
+          <div class="col-md"><sup>c</sup>Anhui University of Science and Technology, Hefei</div>
+          <div class="col-md"><sup>d</sup>Guizhou Polytechnic of Construction, Guiyang</div>
+        </div>
+      </div>
+
+      <!-- Abstract -->
+      <div class="container" id="abstract">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Abstract</h2>
+            <hr>
+          </div>
+          <div class="col-md-12">
+            <p>
+              Automatic and periodic recompiling of building databases with up-to-date high-resolution images has become
+              a critical requirement for rapidly developing urban environments. However, the architecture of most
+              existing approaches for change extraction attempts to learn features related to changes but ignores
+              objectives related to buildings. This inevitably leads to the generation of signifificant pseudo-changes,
+              due to factors such as seasonal changes in images and the inclination of building fa¸cades. To alleviate
+              the above-mentioned problems, we developed a contrastive learning approach by validating historical
+              building footprints against single up-to-date remotely sensed images. This contrastive learning strategy
+              allowed us to inject the semantics of buildings into a pipeline for the detection of changes, which is
+              achieved by increasing the distinguishability of features of buildings from those of non-buildings. In
+              addition, to reduce the effects of inconsistencies between historical building polygons and buildings in
+              up-to-date images, we employed a deformable convolutional neural network to learn offsets intuitively. In
+              summary, we formulated a multi-branch building extraction method that identififies newly constructed and
+              removed buildings, respectively. To validate our method, we conducted comparative experiments using the
+              public Wuhan University building change detection dataset and a more practical dataset named SI-BU that we
+              established. Our method achieved F1 scores of 93.99% and 70.74% on the above datasets, respectively.
+              Moreover, when the data of the public dataset were divided in the same manner as in previous related
+              studies, our method achieved an F1 score of 94.63%, which surpasses that of the state-of-the-art method.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extracted Results -->
+      <div class="container" id="extraction">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Results</h2>
+            <hr>
+          </div>
+          <p class="col-md text-center">Results on SI-BU dataset</p>
+          <div class="col-md-12">
+            <table align="center" style="border-collapse:separate; border-spacing:20px 20px;">
+              <div>
+                <td><img src=img/si-bu.png width="650"></td>
+              </div>
+            </table>
+          </div>
+          <p class="col-md text-center">Results on WHU-CD Dataset</p>
+          <div class="col-md-12">
+            <table align="center" style="border-collapse:separate; border-spacing:20px 20px;">
+              <div>
+                <td><img src=img/whu-cd.png width="650"></td>
+              </div>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Datasets -->
+      <div class="container" id="datasets">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Datasets</h2>
+            <hr>
+          </div>
+          <div class="col-md-12">
+            <p>The modified WHU-CD Dataset: <a href="https://pan.baidu.com/s/1lceyKsCTcqw2Neq1FUzh9w"
+                rel="nofollow">BaiduYun</a> Code: c9a4</p>
+          </div>
+
+          <div class="col-md-12">
+            <p>The SI-BU Dataset: <a href="https://pan.baidu.com/s/1Um2nnbCXDtQXMhiWJR1d3A" rel="nofollow">BaiduYun</a>
+              Code: 5gyh</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="acknowledgements">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Acknowledgements</h2>
+            <hr>
+          </div>
+          <div class="col-md-12">
+            <p>
+              The authors would like to thank the editor, associate editor, and reviewers for their helpful comments and
+              advice. This work was supported in part by the National Natural Science Foundation of China (Projects No.
+              42230102, 42071355, and 41871291), the Sichuan Science and Technology Fund for Distinguished Young
+              Scholars (22JCQN0110), and the Cultivation Program for the Excellent Doctoral Dissertation of Southwest
+              Jiaotong University (2020YBPY09).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="container" id="links">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Links</h2>
+            <hr>
+          </div>
+
+          <a href="https://github.com/liaochengcsu/BCE-Net" class="col-md-2 my-auto img-fluid text-center"
+            target="_blank">
+            <i class="fa fa-github fa-5x" aria-hidden="true"></i>
+            <div>Github</div>
+          </a>
+          <a href="#" class="col-md-2 my-auto img-fluid text-center"><img src="img/10.png">
+            <div>(Slides: coming soon)</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
