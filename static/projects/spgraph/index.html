@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>SuperpixelGraph: Semi-automatic generation of building footprint through semantic-sensitive superpixel and neural graph networks</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <meta name="author" content="Han Hu (胡翰)">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Structure-Aware Completion of Photogrammetric Meshes in Urban Road Environment" />
+  <meta name="keywords" content="vrlab, Han Hu, Aerial ground" />
+  <link rel="shortcut icon" href="img/icon.jpeg">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://www.vrlab.org.cn/~hanhu">Homepage</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#overview">Overview</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#abstract">Abstract</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#extraction">Results</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#acknowledgements">Acknowledgements</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#links">Links</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <!-- Overview -->
+      <div class="container" id="overview">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1>SuperpixelGraph: Semi-automatic generation of building footprint through semantic-sensitive superpixel and neural graph networks</h1>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md">YU Haojia<sup>a</sup></div>
+          <div class="col-md"><a href="https://www.vrlab.org.cn/~hanhu" target="_blank">HU Han<sup>a,</sup>*</a></div>
+          <div class="col-md">XU Bo<sup>a</sup></div>
+          <div class="col-md">SHANG Qisen<sup>a</sup></div>
+          <div class="col-md">WANG Zhendong<sup>a</sup></div>
+          <div class="col-md">ZHU Qing<sup>a</sup></div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md"><sup>a</sup>Southwest Jiaotong University, Chengdu</div>
+        </div>
+      </div>
+
+      <!-- Abstract -->
+      <div class="container" id="abstract">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Abstract</h2>
+            <hr>
+          </div>
+          <div class="col-md-12">
+            <p>
+              Most urban applications necessitate building footprints in the form of concise vector graphics with sharp 
+              boundaries rather than pixel-wise raster images. This need contrasts with the majority of existing methods, 
+              which typically generate over-smoothed footprint polygons. Editing these automatically produced polygons can 
+              be inefficient, if not more time-consuming than manual digitization. This paper introduces a semi-automatic 
+              approach for building footprint extraction through semantically-sensitive superpixels and neural graph networks. 
+              Drawing inspiration from object-based classification techniques, we first learn to generate superpixels that 
+              are not only boundary-preserving but also semantically-sensitive. The superpixels respond exclusively to building 
+              boundaries rather than other natural objects, while simultaneously producing semantic segmentation of the buildings. 
+              These intermediate superpixel representations can be naturally considered as nodes within a graph. Consequently, 
+              graph neural networks are employed to model the global interactions among all superpixels and enhance the 
+              representativeness of node features for building segmentation, which also enables efficient editing of segmentation 
+              results. Classical approaches are utilized to extract and regularize boundaries for the vectorized building footprints. 
+              Utilizing minimal clicks and straightforward strokes, we efficiently accomplish accurate segmentation outcomes, 
+              eliminating the necessity for editing polygon vertices. Our proposed approach demonstrates superior precision 
+              and efficacy, as validated by experimental assessments on various public benchmark datasets. We observe a 10% 
+              enhancement in the metric for superpixel clustering and an 8% increment in vector graphics evaluation, when 
+              compared with established techniques. Additionally, we have devised an optimized and sophisticated pipeline for 
+              interactive editing, poised to further augment the overall quality of the results.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipeline -->
+      <div class="container" id="pipeline">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Pipeline</h2>
+                    <hr>
+                </div>
+                <div class="col-md-12 add-top-margin">
+                    <img src="img/pipeline.png" class="img-fluid" alt="pipeline">
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+      <!-- Results -->
+      <div class="container" id="results">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Results</h2>
+            <hr>
+          </div>
+          <div class="col-md-12">
+            <p>Superpixel segmentation results on WHU dataset:</p>
+            <table align="center" style="border-collapse:separate; border-spacing:20px 0px;">
+              <div>
+                <td><img src="img/superpixel-seg-whu.png" width="1000"></td>
+              </div>
+            </table>
+          </div>
+          <div class="col-md-12">
+            <p>Superpixel segmentation results on INRIA dataset:</p>
+            <table align="center" style="border-collapse:separate; border-spacing:20px 0px;">
+              <div>
+                <td><img src="img/superpixel-seg-inria.png" width="1000"></td>
+              </div>
+            </table>
+          </div>
+          <div class="col-md-12">
+            <p>Superpixel segmentation results on SpaceNet-Vegas dataset:</p>
+            <table align="center" style="border-collapse:separate; border-spacing:20px 0px;">
+              <div>
+                <td><img src="img/superpixel-seg-vegas.png" width="1000"></td>
+              </div>
+            </table>
+          </div>
+          <div class="col-md-12">
+            <p>Operations of interactive editing:</p>
+            <div class="mx-auto col-md-12 embed-responsive embed-responsive-16by9">
+              <p><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/q08gM6W-a0M"
+                  allowfullscreen></iframe></p>
+            </div>
+            <p>The video demonstration is also available in <a
+              href="https://www.bilibili.com/video/BV1Co4y177U8/">Bilibili</a>.
+            </p>            
+          </div>
+        </div>
+      </div>
+
+      <!-- Acknowledgements -->
+      <div class="container" id="acknowledgements">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Acknowledgements</h2>
+            <hr>
+          </div>
+          <div class="col-md-12">
+            <p>
+              This work was supported in part by the National Natural Science Foundation of China (Project No. 42230102, 42071355, 41871291).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="container" id="links">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Links</h2>
+            <hr>
+          </div>
+
+          <a href="https://arxiv.org/abs/2304.05661" class="col-md-2 my-auto img-fluid text-center">
+            <i class="fa fa-file-pdf-o fa-5x" aria-hidden="true"></i>
+            <div>Preprint</div>
+          </a>
+
+          <a href="https://github.com/Haojia521/SuperpixelGraph" class="col-md-2 my-auto img-fluid text-center" target="_blank">
+            <i class="fa fa-github fa-5x" aria-hidden="true"></i>
+            <div>Code</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
