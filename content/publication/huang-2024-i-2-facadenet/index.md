@@ -1,0 +1,11 @@
+---
+title: "I2-FaçadeNet: An Illumination-invariant Façade Recognition Network Leveraging Sparsely Gated Mixture of Multi-color Space Experts for Aerial Oblique Imagery"
+date: 2024-01-01
+publishDate: 2024-06-14T19:22:57.134794Z
+authors: ["Shengzhi Huang", "Han Hu", "Qing Zhu"]
+publication_types: ["2"]
+abstract: "Façade image recognition under complex illumination conditions is crucial for various applications, including urban three-dimensional modeling and building identification. Existing methods relying solely on Red-Green-Blue (RGB) images are prone to texture ambiguity in complex illumination environments. Furthermore, façades display varying orientations and camera viewing angles, resulting in performance issues within the RGB color space. In this study, we introduce an illumination-invariant façade recognition network (I2-FaçadeNet) that leverages sparsely gated multi-color space experts for enhanced façade image recognition in challenging illumination environments. First, RGB façade images are converted into multi-color spaces to eliminate the ambiguous texture in complex illumination. Second, we train expert networks using separate channels of multi-color spaces. Finally, a sparsely gated mechanism is introduced to manage the expert networks, enabling dynamic activation of expert networks and the merging of results. Experimental evaluations leveraging both the International Society for Photogrammetry and Remote Sensing benchmark data sets and the Shenzhen data sets reveal that our proposed I2 -FaçadeNet surpasses various depths of ResNet in façade recognition under complex illumination conditions. Specifically, the classification accuracy for poorly illuminated façades in Zurich improves by nearly 8%, while the accuracy for over-illuminated areas in Shenzhen increases by approximately 3%. Moreover, ablation studies conducted on façade images with complex illumination indicate that compared to traditional RGB-based ResNet, the proposed network achieves an accuracy improvement of 3% to 4% up to 100% for overexposed images and an accuracy improvement of 3% to 10% for underexposed images."
+featured: false
+publication: "*Photogrammetric Engineering & Remote Sensing*"
+---
+
