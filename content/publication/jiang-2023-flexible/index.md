@@ -7,7 +7,7 @@ subtitle: ''
 summary: ''
 authors:
 - Ying Jiang
-- __Han Hu&ast;__
+- __Han Hu\*__
 - Shuming Si
 - Yeting Zhang
 - Jie Chen

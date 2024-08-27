@@ -7,7 +7,7 @@ subtitle: ''
 summary: ''
 authors:
 - Cheng Liao
-- __Han Hu&ast__
+- __Han Hu\*__
 - Xuekun Yuan
 - Haifeng Li
 - Chao Liu

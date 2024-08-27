@@ -68,7 +68,7 @@ links:
   url: https://www.sciencedirect.com/science/article/pii/S1569843223003801
 
 url_code: https://github.com/Haojia521/SuperpixelGraph
-url_project: '/~hanhu/projects/spgraph/'
-url_video: '/~hanhu/projects/spgraph/'
+url_project: '/projects/spgraph/'
+url_video: '/projects/spgraph/'
 
 ---
